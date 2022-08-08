@@ -1,0 +1,32 @@
+.seccion__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: .5rem;
+    padding-bottom: 1rem;
+}
+
+.seccion__header__logo {
+    content: url("../../img/logo__alura-geek.svg");
+    width: 6.25rem;
+    height: 1.75rem;
+    order: 0;
+}
+
+.seccion__header__barra-busqueda {
+    order: 3;
+}
+
+.barra-busqueda__icono {
+    height: 1.5rem;
+    width: 1.5rem;
+    order: 2;
+}
+
+
+.seccion__header__login {
+    color: var(--azul-100);
+    border-color: var(--azul-100);
+    background: #FFFFFF;
+}

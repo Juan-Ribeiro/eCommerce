@@ -1,0 +1,50 @@
+:root {
+    --azul-100: #2A7AE4;
+    --azul-10: #EAF2FD;
+
+
+    --fuente: 'Raleway', sans-serif;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    font-family: var(--fuente);
+    background: #FFFFFF;
+    box-sizing: border-box;
+
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: .75rem 1rem;
+    border: 1px solid;
+}
+
+a {
+    color: var(--azul-100);
+    text-decoration: inherit;
+}
+
+a:active {
+
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    text-decoration: none;
+}
+

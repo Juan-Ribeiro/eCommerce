@@ -1,0 +1,13 @@
+.footer__creditos {
+    background: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.footer__creditos__texto {
+    align-self: stretch;
+    text-align: center;
+}

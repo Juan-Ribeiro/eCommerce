@@ -1,0 +1,24 @@
+.seccion__destacados {
+    height: 12.25rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background: url("../../img/banner_destacados/banner-image.png") no-repeat center / cover;
+    padding: 1rem;
+
+}
+
+.seccion__destacados__contenedor-destacados {
+    display: flex;
+    flex-direction: column;
+    color: #FFFFFF;
+
+    gap: .5rem;
+    align-items: flex-start;
+}
+
+.seccion__destacados__boton-ver-destacado {
+    background: var(--azul-100);
+    color: white;
+}
