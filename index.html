@@ -12,20 +12,22 @@
     <link href="./css/normalize.css" rel="stylesheet"/>
     <link href="./css/reset.css" rel="stylesheet"/>
     <link href="./css/base.css" rel="stylesheet">
-    <link href="./css/header/header.css" rel="stylesheet">
+    <link href="css/header/seccion__header.css" rel="stylesheet">
     <link href="./css/seccion__destacados/seccion__destacados.css" rel="stylesheet">
     <link href="./css/seccion__linea-de-productos/seccion__linea-de-productos.css" rel="stylesheet">
     <link href="./css/footer/seccion__about/seccion__about.css" rel="stylesheet">
-    <link href="./css/footer/seccion__about/footer__creditos.css" rel="stylesheet">
+    <link href="css/footer/creditos/footer__creditos.css" rel="stylesheet">
 </head>
 <body>
 <header>
     <section class="seccion__header">
-        <div class="seccion__header__logo"></div>
+        <a href="index.html">
+            <div class="seccion__header__logo"></div>
+        </a>
         <div class="seccion__header__barra-busqueda">
             <img class="barra-busqueda__icono" src="./img/icono__busqueda.svg" alt="Ícono de Búsqueda">
         </div>
-        <button class="seccion__header__login">Login</button>
+        <button class="seccion__header__login"><a href="./login.html">Login</a></button>
     </section>
 </header>
 <main>
@@ -177,12 +179,12 @@
             <h3>Hable con nosotros</h3>
             <fieldset>
                 <div class="formulario__campo">
-                    <label for="input-nombre">Nombre</label>
+                    <label for="input-nombre" class="formulario__label">Nombre</label>
                     <input id="input-nombre" class="formulario__input" placeholder="André Lisboa">
                 </div>
                 <div class="formulario__campo">
-                    <label for="input-mensaje">Escribe tu mensaje</label>
-                    <textarea id="input-mensaje" class="formulario__input" placeholder="Ingrese su mensaje" rows="4"></textarea>
+                    <label for="input-mensaje" class="formulario__label">Escribe tu mensaje</label>
+                    <textarea id="input-mensaje" class="formulario__input" rows="4"></textarea>
                 </div>
             </fieldset>
 

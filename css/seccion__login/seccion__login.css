@@ -1,0 +1,29 @@
+.main__login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.seccion__main__login {
+    background: #F5F5F5;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.formulario-login__contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    flex-grow: 1;
+}
+
+#login-enviar {
+    width: 7rem;
+    color: white;
+    background: var(--azul-100);
+    border-color: var(--azul-100);
+}

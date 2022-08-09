@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Alura Challenge - eCommerce</title>
+    <link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300;400;500;700&display=swap"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="./css/normalize.css" rel="stylesheet"/>
+    <link href="./css/reset.css" rel="stylesheet"/>
+    <link href="./css/base.css" rel="stylesheet">
+    <link href="css/header/seccion__header.css" rel="stylesheet">
+    <link href="./css/seccion__login/seccion__login.css" rel="stylesheet"/>
+    <link href="./css/footer/seccion__about/seccion__about.css" rel="stylesheet">
+    <link href="css/footer/creditos/footer__creditos.css" rel="stylesheet">
+</head>
+<body>
+<header>
+    <section class="seccion__header">
+        <a href="index.html">
+            <div class="seccion__header__logo"></div>
+        </a>
+        <div class="seccion__header__barra-busqueda">
+            <img class="barra-busqueda__icono" src="./img/icono__busqueda.svg" alt="Ícono de Búsqueda">
+        </div>
+    </section>
+</header>
+<main class="main__login">
+    <section class="seccion__main__login">
+        <form class="formulario-login__contenedor">
+            <h2 class="formulario-login__titulo">Iniciar sesión</h2>
+            <div class="formulario__campo">
+                <label for="login-email"></label>
+                <input id="login-email" class="formulario__input" name="email" type="email" placeholder="Escriba su correo electrónico">
+            </div>
+            <div class="formulario__campo">
+                <label for="login-password"></label>
+                <input id="login-password" class="formulario__input" name="password" type="password" placeholder="Escriba su contraseña">
+            </div>
+            <button id="login-enviar">Entrar</button>
+        </form>
+    </section>
+</main>
+<footer>
+    <section class="seccion__about">
+        <div class="seccion__about__links">
+            <div class="seccion__about__logo"></div>
+            <ul class="seccion__about__links__lista">
+                <li class="lista__enlace"><a href="#">Quiénes somos</a></li>
+                <li class="lista__enlace"><a href="#">Política de privacidad</a></li>
+                <li class="lista__enlace"><a href="#">Programa de fidelidad</a></li>
+                <li class="lista__enlace"><a href="#">Nuestras tiendas</a></li>
+                <li class="lista__enlace"><a href="#">Quiero ser franquiciado</a></li>
+                <li class="lista__enlace"><a href="#">Anúncie aquí</a></li>
+            </ul>
+        </div>
+        <form class="seccion__contacto__formulario">
+            <h3>Hable con nosotros</h3>
+            <fieldset>
+                <div class="formulario__campo">
+                    <label for="input-nombre">Nombre</label>
+                    <input id="input-nombre" class="formulario__input" placeholder="André Lisboa">
+                </div>
+                <div class="formulario__campo">
+                    <label for="input-mensaje">Escribe tu mensaje</label>
+                    <textarea id="input-mensaje" class="formulario__input" placeholder="Ingrese su mensaje"
+                              rows="4"></textarea>
+                </div>
+            </fieldset>
+
+            <button id="boton-enviar" class="formulario__boton-enviar boton">Enviar mensaje</button>
+        </form>
+    </section>
+    <section class="footer__creditos">
+        <h3 class="footer__creditos__texto">Desarrollado por Juan Ribeiro <br> 2022</h3>
+    </section>
+</footer>
+</body>
+</html>
