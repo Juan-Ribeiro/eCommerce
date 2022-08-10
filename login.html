@@ -20,11 +20,16 @@
 <body>
 <header>
     <section class="seccion__header">
-        <a href="index.html">
-            <div class="seccion__header__logo"></div>
-        </a>
+        <div class="seccion__header__direccion">
+            <a href="index.html">
+                <div class="seccion__header__logo"></div>
+            </a>
+        </div>
         <div class="seccion__header__barra-busqueda">
-            <img class="barra-busqueda__icono" src="./img/icono__busqueda.svg" alt="Ícono de Búsqueda">
+            <form action="" class="seccion__header__barra-busqueda__form">
+                <input type="text" placeholder="¿Qué deseas buscar?">
+                <button type="submit"><img src="./img/icono__busqueda.svg" alt="Buscar" class="barra-busqueda__icono"></button>
+            </form>
         </div>
     </section>
 </header>
@@ -34,13 +39,15 @@
             <h2 class="formulario-login__titulo">Iniciar sesión</h2>
             <div class="formulario__campo">
                 <label for="login-email"></label>
-                <input id="login-email" class="formulario__input" name="email" type="email" placeholder="Escriba su correo electrónico">
+                <input id="login-email" class="formulario__input" name="email" type="email"
+                       placeholder="Escriba su correo electrónico">
             </div>
             <div class="formulario__campo">
                 <label for="login-password"></label>
-                <input id="login-password" class="formulario__input" name="password" type="password" placeholder="Escriba su contraseña">
+                <input id="login-password" class="formulario__input" name="password" type="password"
+                       placeholder="Escriba su contraseña">
             </div>
-            <button id="login-enviar">Entrar</button>
+            <button id="login-enviar" class="boton">Entrar</button>
         </form>
     </section>
 </main>
@@ -49,28 +56,26 @@
         <div class="seccion__about__links">
             <div class="seccion__about__logo"></div>
             <ul class="seccion__about__links__lista">
-                <li class="lista__enlace"><a href="#">Quiénes somos</a></li>
-                <li class="lista__enlace"><a href="#">Política de privacidad</a></li>
-                <li class="lista__enlace"><a href="#">Programa de fidelidad</a></li>
-                <li class="lista__enlace"><a href="#">Nuestras tiendas</a></li>
-                <li class="lista__enlace"><a href="#">Quiero ser franquiciado</a></li>
-                <li class="lista__enlace"><a href="#">Anúncie aquí</a></li>
+                <li class="about__enlace"><a href="#">Quiénes somos</a></li>
+                <li class="about__enlace"><a href="#">Política de privacidad</a></li>
+                <li class="about__enlace"><a href="#">Programa de fidelidad</a></li>
+                <li class="about__enlace"><a href="#">Nuestras tiendas</a></li>
+                <li class="about__enlace"><a href="#">Quiero ser franquiciado</a></li>
+                <li class="about__enlace"><a href="#">Anúncie aquí</a></li>
             </ul>
         </div>
         <form class="seccion__contacto__formulario">
             <h3>Hable con nosotros</h3>
             <fieldset>
                 <div class="formulario__campo">
-                    <label for="input-nombre">Nombre</label>
+                    <label for="input-nombre" class="formulario__label">Nombre</label>
                     <input id="input-nombre" class="formulario__input" placeholder="André Lisboa">
                 </div>
                 <div class="formulario__campo">
-                    <label for="input-mensaje">Escribe tu mensaje</label>
-                    <textarea id="input-mensaje" class="formulario__input" placeholder="Ingrese su mensaje"
-                              rows="4"></textarea>
+                    <label for="input-mensaje" class="formulario__label">Escribe tu mensaje</label>
+                    <textarea id="input-mensaje" class="formulario__input" rows="4"></textarea>
                 </div>
             </fieldset>
-
             <button id="boton-enviar" class="formulario__boton-enviar boton">Enviar mensaje</button>
         </form>
     </section>

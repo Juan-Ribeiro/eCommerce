@@ -2,13 +2,16 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
 }
 
 .seccion__main__login {
-    background: #F5F5F5;
+    background: var(--fondo-blanco);
 
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: stretch;
     justify-content: center;
     padding: 2rem;
 }
@@ -18,7 +21,6 @@
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-    flex-grow: 1;
 }
 
 #login-enviar {
@@ -26,4 +28,14 @@
     color: white;
     background: var(--azul-100);
     border-color: var(--azul-100);
+}
+
+@media screen and (min-width: 768px){
+    .seccion__main__login {
+        align-items: center;
+    }
+
+    .formulario-login__contenedor {
+        width: 35rem;
+    }
 }

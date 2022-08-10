@@ -18,7 +18,39 @@
     align-items: flex-start;
 }
 
+.seccion__destacados__contenedor-destacados h3 {
+    font-size: .875rem;
+    font-weight: 600;
+    font-style: normal;
+}
+
 .seccion__destacados__boton-ver-destacado {
     background: var(--azul-100);
     color: white;
+}
+
+@media screen and (min-width: 768px) {
+    .seccion__destacados {
+        height: 22rem;
+    }
+
+    .seccion__destacados__contenedor-destacados{
+        gap: 1rem;
+        padding-left: 2rem;
+    }
+    .seccion__destacados__contenedor-destacados h2 {
+        font-size: 3.25rem;
+        font-weight: 700;
+    }
+
+    .seccion__destacados__contenedor-destacados h3 {
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+}
+
+@media screen and (min-width: 1280px){
+    .seccion__destacados__contenedor-destacados {
+        padding-left: 7.5rem;
+    }
 }

@@ -2,6 +2,7 @@
     --azul-100: #2A7AE4;
     --azul-10: #EAF2FD;
     --fondo-blanco: #F5F5F5;
+    --gris-medio: #464646;
 
     --fuente: 'Raleway', sans-serif;
 }
@@ -24,7 +25,7 @@ section {
     padding: 1rem;
 }
 
-button {
+.boton {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -34,12 +35,7 @@ button {
 }
 
 a {
-    color: var(--azul-100);
     text-decoration: inherit;
-}
-
-a:active {
-
 }
 
 ul {
@@ -50,3 +46,30 @@ li {
     text-decoration: none;
 }
 
+@media screen and (min-width: 768px){
+    section {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    section {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+}
+
+@media screen and (min-width: 1280px){
+    section {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+}
+
+@media screen and (min-width: 1440px){
+    section {
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+}
