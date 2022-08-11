@@ -28,7 +28,8 @@
         <div class="seccion__header__barra-busqueda">
             <form action="" class="seccion__header__barra-busqueda__form">
                 <input type="text" placeholder="¿Qué deseas buscar?">
-                <button type="submit"><img src="./img/icono__busqueda.svg" alt="Buscar" class="barra-busqueda__icono"></button>
+                <button type="submit"><img src="./img/icono__busqueda.svg" alt="Buscar" class="barra-busqueda__icono">
+                </button>
             </form>
         </div>
     </section>
@@ -37,15 +38,18 @@
     <section class="seccion__main__login">
         <form class="formulario-login__contenedor">
             <h2 class="formulario-login__titulo">Iniciar sesión</h2>
-            <div class="formulario__campo">
+            <div class="formulario-contacto__campo">
                 <label for="login-email"></label>
-                <input id="login-email" class="formulario__input" name="email" type="email"
-                       placeholder="Escriba su correo electrónico">
+                <input id="login-email" class="formulario-contacto__input" name="email" type="email"
+                       data-tipo="email" placeholder="Escriba su correo electrónico" pattern="^(?!\s*$).+" required>
+                <span class="formulario__input__mensaje-error"></span>
             </div>
-            <div class="formulario__campo">
+            <div class="formulario-contacto__campo">
                 <label for="login-password"></label>
-                <input id="login-password" class="formulario__input" name="password" type="password"
-                       placeholder="Escriba su contraseña">
+                <input id="login-password" class="formulario-contacto__input" name="password" type="password"
+                       data-tipo="password" placeholder="Escriba su contraseña" maxlength="12"
+                       pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?!.*[ !@#$%^&*_=+-]).{6,12}$" required>
+                <span class="formulario__input__mensaje-error"></span>
             </div>
             <button id="login-enviar" class="boton">Entrar</button>
         </form>
@@ -67,13 +71,17 @@
         <form class="seccion__contacto__formulario">
             <h3>Hable con nosotros</h3>
             <fieldset>
-                <div class="formulario__campo">
-                    <label for="input-nombre" class="formulario__label">Nombre</label>
-                    <input id="input-nombre" class="formulario__input" placeholder="André Lisboa">
+                <div class="formulario-contacto__campo">
+                    <label for="input-nombre" class="formulario-contacto__label" type="text">Nombre</label>
+                    <input id="input-nombre" class="formulario-contacto__input" data-tipo="nombre" type="text"
+                           maxlength="40" pattern="^(?!\s*$).+" required>
+                    <span class="formulario__input__mensaje-error"></span>
                 </div>
-                <div class="formulario__campo">
-                    <label for="input-mensaje" class="formulario__label">Escribe tu mensaje</label>
-                    <textarea id="input-mensaje" class="formulario__input" rows="4"></textarea>
+                <div class="formulario-contacto__campo">
+                    <label for="input-mensaje" class="formulario-contacto__label">Escribe tu mensaje</label>
+                    <textarea id="input-mensaje" class="formulario-contacto__input" data-tipo="mensaje" type="text"
+                              required rows="4" maxlength="120"></textarea>
+                    <span class="formulario__input__mensaje-error"></span>
                 </div>
             </fieldset>
             <button id="boton-enviar" class="formulario__boton-enviar boton">Enviar mensaje</button>
@@ -84,4 +92,5 @@
     </section>
 </footer>
 </body>
+<script src="./js/contact.form.js" type="module"></script>
 </html>

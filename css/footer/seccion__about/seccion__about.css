@@ -49,7 +49,7 @@
     gap: .75rem;
 }
 
-.formulario__campo {
+.formulario-contacto__campo {
     background-color: #FFFFFF;
     display: flex;
     flex-direction: column;
@@ -60,20 +60,27 @@
     box-shadow: 0 2px 2px -2px var(--gris-medio);
 }
 
-.formulario__label {
+.formulario-contacto__label {
     color: #000000;
     opacity: 50%;
 }
 
-.formulario__input {
+.formulario-contacto__input {
     border: none;
     outline: none;
 }
 
-.formulario__campo textarea {
+.formulario-contacto__campo textarea {
     width: 100%;
     resize: none;
     outline: none;
+}
+
+.formulario__input__mensaje-error {
+    display: block;
+    visibility: hidden;
+    font-size: .8rem;
+    color: lightcoral;
 }
 
 .formulario__boton-enviar {
