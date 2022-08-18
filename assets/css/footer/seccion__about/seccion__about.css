@@ -83,11 +83,6 @@
     color: lightcoral;
 }
 
-.formulario__boton-enviar {
-    background: var(--azul-100);
-    color: white;
-}
-
 @media screen and (min-width: 764px) {
     .seccion__about {
         flex-direction: row;

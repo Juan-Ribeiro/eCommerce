@@ -24,7 +24,7 @@
     font-style: normal;
 }
 
-.seccion__destacados__boton-ver-destacado {
+.boton-azul {
     background: var(--azul-100);
     color: white;
 }

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>eCommerce - Alura Challenge</title>
+    <link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300;400;500;700&display=swap"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="../assets/css/normalize.css" rel="stylesheet"/>
+    <link href="../assets/css/reset.css" rel="stylesheet"/>
+    <link href="../assets/css/base.css" rel="stylesheet">
+    <link href="../assets/css/header/seccion__header.css" rel="stylesheet">
+    <link href="../assets/css/seccion__destacados/seccion__destacados.css" rel="stylesheet">
+    <link href="../assets/css/seccion__linea-de-productos/seccion__linea-de-productos.css" rel="stylesheet">
+    <link href="../assets/css/footer/seccion__about/seccion__about.css" rel="stylesheet">
+    <link href="../assets/css/footer/creditos/footer__creditos.css" rel="stylesheet">
+</head>
+<body>
+<header>
+    <section class="seccion__header">
+        <div class="seccion__header__direccion">
+            <a href="index.html">
+                <div class="seccion__header__logo"></div>
+            </a>
+        </div>
+        <div class="seccion__header__barra-busqueda">
+            <form id="formulario-busqueda" class="seccion__header__barra-busqueda__form">
+                <input id="texto-busqueda" type="text" placeholder="¿Qué deseas buscar?">
+                <button type="submit"><img src="../assets/img/icono__busqueda.svg" alt="Buscar"
+                                           class="barra-busqueda__icono">
+                </button>
+            </form>
+        </div>
+        <a href="login.html">
+            <div class="boton-blanco boton">Login</div>
+        </a>
+    </section>
+</header>
+<main>
+    <section class="seccion__destacados">
+        <div class="seccion__destacados__contenedor-destacados">
+            <h2 class="seccion__destacados__titulo-destacado">Febrero Promocional</h2>
+            <h3 class="seccion__destacados__descripcion-destacado">Productos selecionados con 33% de descuento</h3>
+            <a href="#">
+                <button class="boton-azul boton">Ver Consolas</button>
+            </a>
+        </div>
+    </section>
+</main>
+<footer>
+    <section class="seccion__about">
+        <div class="seccion__about__links">
+            <div class="seccion__about__logo"></div>
+            <ul class="seccion__about__links__lista">
+                <li class="about__enlace"><a href="#">Quiénes somos</a></li>
+                <li class="about__enlace"><a href="#">Política de privacidad</a></li>
+                <li class="about__enlace"><a href="#">Programa de fidelidad</a></li>
+                <li class="about__enlace"><a href="#">Nuestras tiendas</a></li>
+                <li class="about__enlace"><a href="#">Quiero ser franquiciado</a></li>
+                <li class="about__enlace"><a href="#">Anúncie aquí</a></li>
+            </ul>
+        </div>
+        <form class="seccion__contacto__formulario">
+            <h3>Hable con nosotros</h3>
+            <fieldset>
+                <div class="formulario-contacto__campo">
+                    <label for="input-nombre" class="formulario-contacto__label" type="text">Nombre</label>
+                    <input id="input-nombre" class="formulario-contacto__input" data-tipo="nombre" type="text"
+                           maxlength="40" pattern="^(?!\s*$).+" required>
+                    <span class="formulario__input__mensaje-error"></span>
+                </div>
+                <div class="formulario-contacto__campo">
+                    <label for="input-mensaje" class="formulario-contacto__label">Escribe tu mensaje</label>
+                    <textarea id="input-mensaje" class="formulario-contacto__input" data-tipo="mensaje" type="text"
+                              required rows="4" maxlength="120"></textarea>
+                    <span class="formulario__input__mensaje-error"></span>
+                </div>
+            </fieldset>
+            <button id="boton-enviar" class="boton-azul boton">Enviar mensaje</button>
+        </form>
+    </section>
+    <section class="footer__creditos">
+        <h3 class="footer__creditos__texto">Desarrollado por Juan Elias Ribeiro <br> 2022</h3>
+    </section>
+</footer>
+<script src="../service/form.js" type="module"></script>
+<script src="../controllers/client.product.controller.js" type="module"></script>
+</body>
+</html>

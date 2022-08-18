@@ -31,7 +31,7 @@
     border-radius: 3rem;
 
     order: 3;
-    background: var(--fondo-blanco);
+    background: var(--blanco);
 }
 
 .seccion__header__barra-busqueda__form {
@@ -66,7 +66,7 @@
     order: 2;
 }
 
-.seccion__header__boton-login {
+.boton-blanco {
     color: var(--azul-100);
     border-color: var(--azul-100);
     background: #FFFFFF;
@@ -93,6 +93,11 @@
 }
 
 @media screen and (min-width: 1280px){
+    .seccion__header {
+        padding-left: 9.5rem;
+        padding-right: 9.5rem;
+    }
+
     .seccion__header__barra-busqueda {
         max-width: 25rem;
     }

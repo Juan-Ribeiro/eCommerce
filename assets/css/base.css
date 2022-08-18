@@ -1,7 +1,7 @@
 :root {
     --azul-100: #2A7AE4;
     --azul-10: #EAF2FD;
-    --fondo-blanco: #F5F5F5;
+    --blanco: #F5F5F5;
     --gris-medio: #464646;
 
     --fuente: 'Raleway', sans-serif;
@@ -14,7 +14,7 @@ html, body {
 
 body {
     font-family: var(--fuente);
-    background: var(--fondo-blanco);
+    background: var(--blanco);
     box-sizing: border-box;
 
     display: flex;
@@ -32,6 +32,18 @@ section {
     align-items: center;
     padding: .75rem 1rem;
     border: 1px solid;
+}
+
+.boton-azul {
+    color: var(--blanco);
+    background: var(--azul-100);
+    border-color: var(--azul-100);
+}
+
+.boton-blanco {
+    color: var(--azul-100);
+    background: var(--blanco);
+    border-color: var(--azul-100);
 }
 
 a {

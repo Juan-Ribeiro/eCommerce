@@ -7,7 +7,7 @@
 }
 
 .seccion__main__login {
-    background: var(--fondo-blanco);
+    background: var(--blanco);
 
     display: flex;
     flex-direction: column;
@@ -25,9 +25,6 @@
 
 #login-enviar {
     width: 7rem;
-    color: white;
-    background: var(--azul-100);
-    border-color: var(--azul-100);
 }
 
 @media screen and (min-width: 768px){

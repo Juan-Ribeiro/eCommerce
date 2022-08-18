@@ -1,0 +1,25 @@
+.seccion__edicion-concluida {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    gap: 1rem;
+}
+
+.span_edicion-concluida {
+    display: block;
+
+    height: 12rem;
+    width: 12rem;
+    margin-bottom: 1rem;
+
+    max-height: 100%;
+    max-width: 100%;
+
+    background: url("../../img/icono__concluido.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
