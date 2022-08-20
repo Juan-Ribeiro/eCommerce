@@ -1,7 +1,7 @@
-const apiURL = "https://62f8d0fc3eab3503d1dbb530.mockapi.io";
+const apiURL = "https://62f8d0fc3eab3503d1dbb530.mockapi.io/";
 
 const listaProductos = () => {
-    return fetch(apiURL + "/products")
+    return fetch(apiURL + "products")
         .then((respuesta) => respuesta.json());
 };
 
@@ -17,19 +17,19 @@ const agregarProducto = (categoria, urlImagen, nombre, precio, descripcion) => {
 }
 
 const eliminarProducto = (id) => {
-    return fetch(apiURL + `/${id}`, {
+    return fetch(apiURL + `products/${id}`, {
         method: "DELETE",
     });
 };
 
 const detalleProducto = (id) => {
-    return fetch(apiURL + `/${id}`).then((respuesta) =>
-        respuesta.json()
-    );
+    return fetch(apiURL + `products/${id}`)
+        .then((respuesta) => respuesta.json())
+        .catch((err) => console.log(err));
 };
 
 const actualizarProducto = (categoria, urlImagen, nombre, precio, descripcion, id) => {
-    return fetch((apiURL + `/${id}`), {
+    return fetch((apiURL + `products/${id}`), {
         method: "PUT",
         headers: {
             "Content-Type": "application/json",
@@ -55,7 +55,7 @@ const listaProductosPorNombre = (nombre) => {
 };
 
 const obtenerUsuarios = () => {
-    return fetch(apiURL + "/users",)
+    return fetch(apiURL + "users",)
         .then((respuesta) => respuesta.json())
 };
 
