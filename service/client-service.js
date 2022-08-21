@@ -40,16 +40,15 @@ const actualizarProducto = (categoria, urlImagen, nombre, precio, descripcion, i
         .catch((err) => console.log(err));
 };
 
-const listaProductosPorNombre = (nombre) => {
+const listaProductosPorNombre = async (nombre) => {
     const productos = [];
-    listaProductos()
-        .then((respuesta) => {
-            respuesta.forEach((producto) => {
-                if (producto.nombre === nombre) {
-                    productos.push(producto);
-                }
-            });
-        })
+    const data = await listaProductos();
+
+    data.forEach((producto) => {
+        if (producto.nombre === nombre) {
+            productos.push(producto);
+        }
+    });
 
     return productos;
 };
