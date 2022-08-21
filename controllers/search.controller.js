@@ -2,6 +2,17 @@ import {clientServices} from "../service/client-service.js";
 import {mostrarProductos} from "./client.product.controller.js"
 
 const formulario = document.querySelector("#formulario-busqueda");
+const barraBusqueda = document.querySelector("#texto-busqueda");
+const botonBusqueda = document.querySelector("#boton-busqueda");
+const widthMatch = window.matchMedia("(max-width: 768px)");
+
+widthMatch.addEventListener('change', function (mm) {
+    if (mm.matches) {
+        botonBusqueda.addEventListener("click", enfocarBarraDeBusqueda);
+    } else {
+        botonBusqueda.removeEventListener("click", enfocarBarraDeBusqueda);
+    }
+});
 
 formulario.addEventListener("submit", async (evento) => {
     evento.preventDefault();
@@ -17,20 +28,8 @@ formulario.addEventListener("submit", async (evento) => {
     }
 });
 
-const barraBusqueda = document.querySelector("#texto-busqueda");
-const botonBusqueda = document.querySelector("#boton-busqueda");
-const widthMatch = window.matchMedia("(max-width: 768px)");
-// mm in the function arg is the matchMedia object, passed back into the function
-widthMatch.addEventListener('change', function(mm) {
-    if (mm.matches) {
-        botonBusqueda.addEventListener("click", (evento) => {
-            evento.preventDefault();
-            barraBusqueda.focus();
-            barraBusqueda.click();
-        });
-    }
-    else {
-        // it no longer matches the media query
-        // remove the event listener
-    }
-});
+function enfocarBarraDeBusqueda(evento) {
+    evento.preventDefault();
+    barraBusqueda.focus();
+    barraBusqueda.click();
+}
