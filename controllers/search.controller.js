@@ -26,6 +26,7 @@ widthMatch.addEventListener('change', function(mm) {
         botonBusqueda.addEventListener("click", (evento) => {
             evento.preventDefault();
             barraBusqueda.focus();
+            barraBusqueda.click();
         });
     }
     else {
