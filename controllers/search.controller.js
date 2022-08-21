@@ -14,7 +14,22 @@ formulario.addEventListener("submit", async (evento) => {
         main.innerHTML = "";
 
         mostrarProductos(productos);
-    } else {
-        window.location.href = "../screens/error.html";
+    }
+});
+
+const barraBusqueda = document.querySelector("#texto-busqueda");
+const botonBusqueda = document.querySelector("#boton-busqueda");
+const widthMatch = window.matchMedia("(max-width: 768px)");
+// mm in the function arg is the matchMedia object, passed back into the function
+widthMatch.addEventListener('change', function(mm) {
+    if (mm.matches) {
+        botonBusqueda.addEventListener("click", (evento) => {
+            evento.preventDefault();
+            barraBusqueda.focus();
+        });
+    }
+    else {
+        // it no longer matches the media query
+        // remove the event listener
     }
 });
