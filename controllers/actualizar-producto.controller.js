@@ -7,7 +7,7 @@ const obtenerInformacion = async () => {
     const id = url.searchParams.get("id");
 
     if (id === null) {
-        window.location.href = "../screens/error.html";
+        window.location.href = "./error.html";
     }
 
     const categoria = document.querySelector("#input-producto-categoria");
@@ -28,7 +28,7 @@ const obtenerInformacion = async () => {
             throw new Error();
         }
     } catch (e) {
-        window.location.href = "../screens/error.html";
+        window.location.href = "./error.html";
         console.log(e)
     }
 };
@@ -41,7 +41,7 @@ formularioProducto.addEventListener("submit", (evento) => {
     const id = url.searchParams.get("id");
 
     const categoria = document.querySelector("#input-producto-categoria").value;
-    const urlImagen = document.querySelector("#input-url-imagen").value;
+    const urlImagen = document.querySelector("#input-url-imagen").files[0].value;
     const nombre = document.querySelector("#input-producto-nombre").value;
     const precio = document.querySelector("#input-producto-precio").value;
     const descripcion = document.querySelector("#input-producto-descripcion").value;
@@ -49,6 +49,6 @@ formularioProducto.addEventListener("submit", (evento) => {
     console.log(nombre);
     clientServices.actualizarProducto(categoria, urlImagen, nombre, precio, descripcion, id)
         .then(() => {
-        window.location.href = "/screens/edicion_concluida.html";
+        window.location.href = "./edicion_concluida.html";
     });
 });

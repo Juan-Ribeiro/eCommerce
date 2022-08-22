@@ -5,45 +5,62 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>eCommerce - Actualizar producto</title>
+    <title>eCommerce - Agregar producto</title>
     <link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300;400;500;700&display=swap"
           rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link href="../assets/css/normalize.css" rel="stylesheet"/>
-    <link href="../assets/css/reset.css" rel="stylesheet"/>
-    <link href="../assets/css/base.css" rel="stylesheet">
-    <link href="../assets/css/header/seccion__header.css" rel="stylesheet">
-    <link href="../assets/css/seccion__agregar-producto/seccion__agregar-producto.css" rel="stylesheet"/>
-    <link href="../assets/css/footer/seccion__about/seccion__about.css" rel="stylesheet">
-    <link href="../assets/css/footer/creditos/footer__creditos.css" rel="stylesheet">
+    <link href="assets/css/normalize.css" rel="stylesheet"/>
+    <link href="assets/css/reset.css" rel="stylesheet"/>
+    <link href="assets/css/base.css" rel="stylesheet">
+    <link href="assets/css/header/seccion__header.css" rel="stylesheet">
+    <link href="assets/css/seccion__agregar-producto/seccion__agregar-producto.css" rel="stylesheet"/>
+    <link href="assets/css/footer/seccion__about/seccion__about.css" rel="stylesheet">
+    <link href="assets/css/footer/creditos/footer__creditos.css" rel="stylesheet">
 </head>
 <body>
 <header>
     <section class="seccion__header">
         <div class="seccion__header__direccion">
-            <a href="../index.html">
-                <div class="seccion__header__logo"></div>
+            <a href="index.html">
+                <div class="seccion__header__direccion__logo"></div>
             </a>
         </div>
+        <i id="boton-barra-busqueda">
+            <img src="assets/img/icono__busqueda.svg" alt="Buscar">
+        </i>
         <div class="seccion__header__barra-busqueda">
-            <form action="" class="seccion__header__barra-busqueda__form">
-                <input type="text" placeholder="¿Qué deseas buscar?">
-                <button type="submit"><img src="../assets/img/icono__busqueda.svg" alt="Buscar"
-                                           class="barra-busqueda__icono">
+            <form id="formulario-busqueda" class="seccion__header__barra-busqueda__form">
+                <i id="boton-volver"
+                   class="seccion__header__barra-busqueda__form__boton-volver">
+                    <img src="assets/img/icono__flecha-volver.svg" alt="Volver">
+                </i>
+                <input
+                        id="texto-busqueda"
+                        type="text"
+                        placeholder="¿Qué deseas buscar?"
+                        class="seccion__header__barra-busqueda__form__input">
+                <button
+                        type="submit"
+                        id="boton-buscar"
+                        class="seccion__header__barra-busqueda__form__boton-submit">
+                    <img src="assets/img/icono__busqueda.svg" alt="Buscar" class="barra-busqueda__icono">
                 </button>
             </form>
         </div>
+        <a id="boton-login" href="login.html">
+            <div class="boton-blanco boton">Login</div>
+        </a>
     </section>
 </header>
 <main class="main__agregar-producto">
     <section class="seccion__agregar-producto">
         <form action="#" class="formulario__agregar-producto" data-form-producto>
             <div class="form__input-container">
-                <h2 class="formulario__titulo">Editar producto</h2>
+                <h2 class="formulario__titulo">Agregar nuevo producto</h2>
                 <div class="formulario-contacto__campo">
                     <label for="input-url-imagen">URL de la imagen</label>
                     <input id="input-url-imagen" class="formulario-contacto__input" data-tipo="urlImagen"
-                           type="text" accept="image/*" required>
+                           type="file" accept="image/*" required>
                     <span class="formulario__input__mensaje-error"></span>
                 </div>
                 <div class="formulario-contacto__campo">
@@ -70,7 +87,7 @@
                               rows="4" data-tipo="descripcion" maxlength="150" type="text" required></textarea>
                     <span class="formulario__input__mensaje-error"></span>
                 </div>
-                <button class="boton-agregar-producto boton">Actualizar producto</button>
+                <button class="boton-agregar-producto boton">Agregar producto</button>
             </div>
         </form>
     </section>
@@ -114,7 +131,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js"
         integrity="sha512-UNM1njAgOFUa74Z0bADwAq8gbTcqZC8Ej4xPSzpnh0l6KMevwvkBvbldF9uR++qKeJ+MOZHRjV1HZjoRvjDfNQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="../controllers/actualizar-producto.controller.js" type="module"></script>
-<script src="../service/form.js" type="module"></script>
+<script src="service/form.js" type="module"></script>
+<script src="controllers/agregar-producto.controller.js" type="module"></script>
+<script src="controllers/search.controller.js" type="module"></script>
 </body>
 </html>

@@ -1,5 +1,3 @@
-import {clientServices} from "../service/client-service.js";
-
 const crearNuevoContenedorProducto = (urlImagen, nombre, precio) => {
     const itemLista = document.createElement("li");
     itemLista.classList.add("producto__contenedor");
@@ -68,11 +66,3 @@ export const mostrarProductos = (data) => {
         main.appendChild(seccionHTML);
     }
 };
-
-
-clientServices
-    .listaProductos()
-    .then((data) => mostrarProductos(data))
-    .catch((err) => {
-        console.log(err);
-    });
