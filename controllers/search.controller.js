@@ -6,6 +6,6 @@ formulario.addEventListener("submit", (evento) => {
     const busqueda = formulario.querySelector("#texto-busqueda").value;
     if (busqueda !== "" && busqueda.length > 0) {
         localStorage.setItem("search", JSON.stringify(busqueda));
-        window.location.href = "../resultados_busqueda.html";
+        window.location.href = "./resultados_busqueda.html";
     }
 });
