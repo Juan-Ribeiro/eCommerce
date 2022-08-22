@@ -9,9 +9,9 @@ Puntos hasta ahora implementados:
 * Consultar productos
 * Editar productos
 * Borrar productos
+* Implementación JavaScript de Barra de búsqueda
 
 Puntos que faltan desarrollar:
-* Implementación JavaScript de Barra de búsqueda
 * Solucionar problema de imagen al agregar producto
 * Página de descripción de productos
 
