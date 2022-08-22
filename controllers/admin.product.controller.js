@@ -8,10 +8,10 @@ const crearNuevoContenedorProducto = (urlImagen, nombre, precio, id) => {
                     <div class="producto__imagen">
                         <div class="producto__acciones">
                             <button class="producto__acciones__borrar-producto" id="${id}">
-                                <img src="../assets/img/icono__borrar-producto.svg" alt="Ícono Borrar Producto">
+                                <img src="./assets/img/icono__borrar-producto.svg" alt="Ícono Borrar Producto">
                             </button>
-                            <a href="../screens/actualizar_producto.html?id=${id}">
-                                <img src="../assets/img/icono__editar-producto.svg" alt="Ícono Editar Producto">
+                            <a href="./actualizar_producto.html?id=${id}">
+                                <img src="./assets/img/icono__editar-producto.svg" alt="Ícono Editar Producto">
                             </a>
                         </div>
                         <img src=${urlImagen} alt="Imagen Producto">                        
@@ -28,7 +28,7 @@ const crearNuevoContenedorProducto = (urlImagen, nombre, precio, id) => {
             .then(() => itemLista.remove())
             .catch((err) => {
                 console.log(err);
-                window.location.href = "../screens/error.html";
+                window.location.href = "./error.html";
             });
     });
 

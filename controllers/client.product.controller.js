@@ -7,7 +7,7 @@ const crearNuevoContenedorProducto = (urlImagen, nombre, precio) => {
                     </div>
                     <h3 class="producto__nombre">${nombre}</h3>
                     <h3 class="producto__precio">$${precio}</h3>
-                    <a href="" class="producto__enlace-ver-producto">Ver producto</a>
+                    <a href="#" class="producto__enlace-ver-producto">Ver producto</a>
     `;
 
     return itemLista;
@@ -25,7 +25,7 @@ const crearNuevaSeccionDeProductos = (categoria) => {
         <h2 class="seccion__linea-de-productos__cabezal__titulo">${categoria}</h2>
         <div class="seccion__linea-de-productos__enlace-ver-todo">
             <a href="#" class="seccion__linea-de-productos__enlace-ver-todo__link">Ver todo</a>
-            <img src="../assets/img/icono__flecha.svg" alt="Flecha">
+            <img src="./assets/img/icono__flecha.svg" alt="Flecha">
         </div>
     `
 
