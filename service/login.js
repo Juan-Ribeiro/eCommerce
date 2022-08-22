@@ -14,8 +14,8 @@ formularioLogin.addEventListener("submit", (evento) => {
             "password": password
         }
         clientServices.autenticarUsuario(usuario) ?
-            window.location.href = "../screens/admin.html"
-            : window.location.href = "../screens/error.html";
+            window.location.href = "../admin.html"
+            : window.location.href = "../error.html";
     }
 })
 ;

@@ -15,42 +15,65 @@
     gap: 2rem
 }
 
-.seccion__header__logo {
+.seccion__header__direccion__logo {
     content: url("../../img/logo__alura-geek.svg");
     width: 6.25rem;
     height: 1.75rem;
 }
 
 .seccion__header__barra-busqueda {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    order: 3;
+    max-width: 25rem;
+    gap: .5rem;
+
+    padding: 0.625rem 1.25rem;
+    border-radius: 3rem;
+
+    background: var(--blanco);
+    transition: display 2s ease-in-out;
+}
+
+#boton-barra-busqueda {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-grow: 0;
-    max-width: 25rem;
+    order:2;
+}
 
-    border-radius: 3rem;
-
-    order: 3;
-    background: var(--blanco);
+#boton-barra-busqueda img {
+    height: 1.5rem;
+    width: 1.5rem;
 }
 
 .seccion__header__barra-busqueda__form {
-    display: flex;
-    padding: 0.625rem 1.25rem;
+    display: none;
     flex-grow: 1;
 }
 
 .seccion__header__barra-busqueda__form input {
     display: none;
+    text-align: center;
 
     background: transparent;
     flex: 1;
     border: 0;
     outline: none;
-    padding: 1rem .75rem;
 }
 
-.seccion__header__barra-busqueda__form button {
+#boton-volver {
+    display: none;
+    align-items: center;
+}
+
+#boton-volver img {
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+#boton-buscar {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -78,13 +101,25 @@
         justify-content: flex-start;
     }
 
+    #boton-barra-busqueda {
+        display: none;
+        visibility: hidden;
+    }
+
     .seccion__header__barra-busqueda {
+        display: flex;
         order: 0;
         flex-grow: 1;
     }
 
+    .seccion__header__barra-busqueda__form {
+        display: flex;
+    }
+
     .seccion__header__barra-busqueda__form input {
         display: flex;
+        text-align: left;
+        padding: 1rem .75rem;
     }
 
     .seccion__header a {
