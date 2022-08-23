@@ -29,7 +29,7 @@ const obtenerInformacion = async () => {
         }
     } catch (e) {
         window.location.href = "./error.html";
-        console.log(e)
+        console.log(e);
     }
 };
 
@@ -41,7 +41,7 @@ formularioProducto.addEventListener("submit", (evento) => {
     const id = url.searchParams.get("id");
 
     const categoria = document.querySelector("#input-producto-categoria").value;
-    const urlImagen = document.querySelector("#input-url-imagen").files[0].value;
+    const urlImagen = document.querySelector("#input-url-imagen").value;
     const nombre = document.querySelector("#input-producto-nombre").value;
     const precio = document.querySelector("#input-producto-precio").value;
     const descripcion = document.querySelector("#input-producto-descripcion").value;

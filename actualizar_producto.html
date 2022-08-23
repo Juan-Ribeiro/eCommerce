@@ -57,33 +57,33 @@
         <form action="#" class="formulario__agregar-producto" data-form-producto>
             <div class="form__input-container">
                 <h2 class="formulario__titulo">Editar producto</h2>
-                <div class="formulario-contacto__campo">
+                <div class="formulario__campo">
                     <label for="input-url-imagen">URL de la imagen</label>
-                    <input id="input-url-imagen" class="formulario-contacto__input" data-tipo="urlImagen"
-                           type="file" accept="image/*" required>
+                    <input id="input-url-imagen" class="formulario__input" data-tipo="urlImagen"
+                           type="text" accept="image/*" required>
                     <span class="formulario__input__mensaje-error"></span>
                 </div>
-                <div class="formulario-contacto__campo">
+                <div class="formulario__campo">
                     <label for="input-producto-categoria">Categoría</label>
-                    <input id="input-producto-categoria" class="formulario-contacto__input" data-tipo="categoria"
+                    <input id="input-producto-categoria" class="formulario__input" data-tipo="categoria"
                            maxlength="20" type="text" pattern="^(?!\s*$).+" required>
                     <span class="formulario__input__mensaje-error"></span>
                 </div>
-                <div class="formulario-contacto__campo">
+                <div class="formulario__campo">
                     <label for="input-producto-nombre">Nombre del producto</label>
-                    <input id="input-producto-nombre" class="formulario-contacto__input" data-tipo="nombre"
+                    <input id="input-producto-nombre" class="formulario__input" data-tipo="nombre"
                            type="text" pattern="^(?!\s*$).+" required>
                     <span class="formulario__input__mensaje-error"></span>
                 </div>
-                <div class="formulario-contacto__campo">
+                <div class="formulario__campo">
                     <label for="input-producto-precio">Precio del producto</label>
-                    <input id="input-producto-precio" class="formulario-contacto__input" data-tipo="precio"
+                    <input id="input-producto-precio" class="formulario__input" data-tipo="precio"
                            type="number" min="1" step=".01" required>
                     <span class="formulario__input__mensaje-error"></span>
                 </div>
-                <div class="formulario-contacto__campo">
+                <div class="formulario__campo">
                     <label for="input-producto-descripcion">Descripción del producto</label>
-                    <textarea id="input-producto-descripcion" class="formulario-contacto__input"
+                    <textarea id="input-producto-descripcion" class="formulario__input"
                               rows="4" data-tipo="descripcion" maxlength="150" type="text" required></textarea>
                     <span class="formulario__input__mensaje-error"></span>
                 </div>
@@ -108,15 +108,15 @@
         <form class="seccion__contacto__formulario" data-tipo>
             <h3>Hable con nosotros</h3>
             <fieldset>
-                <div class="formulario-contacto__campo">
+                <div class="formulario__campo">
                     <label for="input-nombre" class="formulario-contacto__label" type="text">Nombre</label>
-                    <input id="input-nombre" class="formulario-contacto__input" data-tipo="nombre" type="text"
+                    <input id="input-nombre" class="formulario__input" data-tipo="nombre" type="text"
                            maxlength="40" pattern="^(?!\s*$).+" required>
                     <span class="formulario__input__mensaje-error"></span>
                 </div>
-                <div class="formulario-contacto__campo">
+                <div class="formulario__campo">
                     <label for="input-mensaje" class="formulario-contacto__label">Escribe tu mensaje</label>
-                    <textarea id="input-mensaje" class="formulario-contacto__input" data-tipo="mensaje" type="text"
+                    <textarea id="input-mensaje" class="formulario__input" data-tipo="mensaje" type="text"
                               required rows="4" maxlength="120"></textarea>
                     <span class="formulario__input__mensaje-error"></span>
                 </div>

@@ -7,7 +7,7 @@ const listaProductos = () => {
 
 // CREATE
 const agregarProducto = (categoria, urlImagen, nombre, precio, descripcion) => {
-    return fetch(apiURL, {
+    return fetch(apiURL + "products", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
