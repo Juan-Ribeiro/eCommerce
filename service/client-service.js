@@ -57,46 +57,48 @@ const obtenerUsuarios = () => {
         .then((respuesta) => respuesta.json())
 };
 
-const autenticarUsuario = async (usuario) => {
+const autenticarUsuario = async (usuarioIngresado) => {
+    let autentificado = false;
     try {
-        const data = await obtenerUsuarios();+
-        data.forEach((user) => {
-            if (user.email === user.email && usuario.password === usuario.password) {
-                establecerCookie(user.id);
-                return true;
+        const data = await obtenerUsuarios();
+        data.forEach((usuario) => {
+            if (usuario.email === usuario.email && usuarioIngresado.password === usuarioIngresado.password) {
+                document.cookie = `admin=${usuario.id}`;
+                autentificado = true;
             }
         });
-        return false;
     } catch (e) {
         console.log("Email o clave inválidos. Intente nuevamente.");
     }
-    return false;
+    return autentificado;
 };
 
 const verificarAdmin = async () => {
+    let esAdmin = false;
+    const cookieID = obtenerCookie("admin");
+
     try {
-        const cookieID = obtenerCookie("admin");
         const data = await obtenerUsuarios();
         data.forEach((user) => {
             if (user.id === cookieID) {
-                return true;
+                esAdmin = true;
             }
         });
     } catch (e) {
         console.log(e);
     }
-    return false;
+    return esAdmin;
 };
 
-const establecerCookie = (id) => {
-    document.cookie = `admin=${id}`;
+const retirarAdmin = () => {
+    document.cookie = "admin=; expires=Thu, 01 Jan 1970 00:00:00 UTC;"
 };
 
 const obtenerCookie = (cname) => {
     let name = cname + "=";
     let decodedCookie = decodeURIComponent(document.cookie);
     let ca = decodedCookie.split(';');
-    for(let i = 0; i <ca.length; i++) {
+    for (let i = 0; i < ca.length; i++) {
         let c = ca[i];
         while (c.charAt(0) === ' ') {
             c = c.substring(1);
@@ -117,6 +119,6 @@ export const clientServices = {
     listaProductosPorNombre,
     obtenerUsuarios,
     autenticarUsuario,
-    establecerCookie,
     verificarAdmin,
+    retirarAdmin,
 };

@@ -90,11 +90,6 @@
     overflow: hidden;
 }
 
-.producto__acciones__borrar-producto img {
-    height: 1.5rem;
-    width: 1.5rem;
-}
-
 .producto__imagen img {
     width: 100%;
     height: auto;

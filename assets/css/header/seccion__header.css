@@ -95,6 +95,18 @@
     background: #FFFFFF;
 }
 
+#boton-login, #boton-administrador{
+    width: 11.5rem;
+    cursor: pointer;
+}
+
+#boton-administrador:hover {
+    border-color: red;
+    background: red;
+    color: white !important;
+    content: "Completed!" !important;
+}
+
 @media screen and (min-width: 768px){
 
     #boton-barra-busqueda {

@@ -1,4 +1,3 @@
-import {generarSeccionHeader} from "./header.js";
 import {clientServices} from "../../service/client-service.js";
 
 const admin = clientServices.verificarAdmin();
@@ -86,5 +85,4 @@ export const crearNuevoContenedorProducto = (urlImagen, nombre, precio, id) => {
     return itemLista;
 };
 
-generarSeccionHeader();
 generarSeccionTodosLosProductos();

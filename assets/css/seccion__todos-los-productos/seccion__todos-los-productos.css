@@ -51,18 +51,19 @@
     position: absolute;
     top: .5rem;
     right: .5rem;
-    height: 1.5rem;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    gap: .5rem;
+    gap: 1rem;
 }
 
 .producto__acciones__borrar-producto {
+    height: 1.5rem;
     width: 1.5rem;
-    background-color: transparent;
-    background-repeat: no-repeat;
     border: none;
+    background-color: transparent;
+    background-image: url("../../img/icono__borrar-producto.svg");
+    background-size: cover;
     cursor: pointer;
     overflow: hidden;
 }

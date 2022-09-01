@@ -1,6 +1,6 @@
 import {clientServices} from "../service/client-service.js";
 
-const admin = clientServices.verificarAdmin();
+const admin = await clientServices.verificarAdmin();
 
 const crearNuevoContenedorProducto = (urlImagen, nombre, precio, id) => {
     const itemLista = document.createElement("li");
