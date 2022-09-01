@@ -13,7 +13,7 @@ formularioLogin.addEventListener("submit", async (evento) => {
             "password": password
         }
         const autenticado = await clientServices.autenticarUsuario(usuario);
-        autenticado ? window.location.href = "../../index.html" : window.location.href = "../../error.html";
+        autenticado ? window.location.href = "./index.html" : window.location.href = "./error.html";
     }
 })
 ;
