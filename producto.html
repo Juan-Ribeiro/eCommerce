@@ -13,8 +13,7 @@
     <link href="assets/css/reset.css" rel="stylesheet"/>
     <link href="assets/css/base.css" rel="stylesheet">
     <link href="assets/css/header/seccion__header.css" rel="stylesheet">
-    <link href="assets/css/seccion__error/seccion__error.css" rel="stylesheet">
-    <link href="assets/css/seccion__linea-de-productos/seccion__linea-de-productos.css" rel="stylesheet">
+    <link href="assets/css/seccion__producto/seccion__producto.css" rel="stylesheet">
     <link href="assets/css/footer/seccion__about/seccion__about.css" rel="stylesheet">
     <link href="assets/css/footer/creditos/footer__creditos.css" rel="stylesheet">
 </head>
@@ -22,13 +21,19 @@
 <header>
 </header>
 <main>
+    <section class="seccion__producto">
+        <img src="#" alt="Imagen del Producto" class="seccion__producto__imagen">
+        <div class="seccion__producto__informacion">
+            <h2 class="seccion__producto__nombre"></h2>
+            <h3 class="seccion__producto__precio"></h3>
+            <p class="seccion__producto__descripcion"></p>
+        </div>
+    </section>
 </main>
 <footer>
 </footer>
-<script src="controllers/page_controllers/header.js" type="module"></script>
-<script src="controllers/page_controllers/footer.js" type="module"></script>
-<script src="controllers/page_controllers/resultados-busqueda.js" type="module"></script>
-<script src="controllers/search.controller.js" type="module"></script>
-<script src="service/form.js" type="module"></script>
+<script src="controllers/page_controllers/header.js"></script>
+<script src="controllers/page_controllers/footer.js"></script>
+<script src="controllers/page_controllers/producto.js" type="module"></script>
 </body>
 </html>

@@ -1,5 +1,10 @@
 import {clientServices} from "../service/client-service.js";
 
+const admin = clientServices.verificarAdmin();
+if (!admin) {
+    window.location.href = "./error.html";
+}
+
 const formularioProducto = document.querySelector("[data-form-producto]");
 
 const obtenerInformacion = async () => {

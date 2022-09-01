@@ -1,5 +1,6 @@
-import {clientServices} from "./client-service.js";
-import {mostrarProductos} from "../controllers/client.product.controller.js";
+import {clientServices} from "../../service/client-service.js";
+import {mostrarProductos} from "../client.product.controller.js";
+
 
 clientServices.listaProductos()
     .then((data) => mostrarProductos(data))

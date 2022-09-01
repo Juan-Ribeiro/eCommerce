@@ -5,7 +5,6 @@ const listaProductos = () => {
         .then((respuesta) => respuesta.json());
 };
 
-// CREATE
 const agregarProducto = (categoria, urlImagen, nombre, precio, descripcion) => {
     return fetch(apiURL + "products", {
         method: "POST",
@@ -60,17 +59,54 @@ const obtenerUsuarios = () => {
 
 const autenticarUsuario = async (usuario) => {
     try {
-        const data = await obtenerUsuarios();
+        const data = await obtenerUsuarios();+
         data.forEach((user) => {
             if (user.email === user.email && usuario.password === usuario.password) {
+                establecerCookie(user.id);
                 return true;
             }
         });
+        return false;
     } catch (e) {
         console.log("Email o clave inválidos. Intente nuevamente.");
     }
     return false;
 };
+
+const verificarAdmin = async () => {
+    try {
+        const cookieID = obtenerCookie("admin");
+        const data = await obtenerUsuarios();
+        data.forEach((user) => {
+            if (user.id === cookieID) {
+                return true;
+            }
+        });
+    } catch (e) {
+        console.log(e);
+    }
+    return false;
+};
+
+const establecerCookie = (id) => {
+    document.cookie = `admin=${id}`;
+};
+
+const obtenerCookie = (cname) => {
+    let name = cname + "=";
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let ca = decodedCookie.split(';');
+    for(let i = 0; i <ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) === ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) === 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
 
 export const clientServices = {
     listaProductos,
@@ -81,4 +117,6 @@ export const clientServices = {
     listaProductosPorNombre,
     obtenerUsuarios,
     autenticarUsuario,
+    establecerCookie,
+    verificarAdmin,
 };

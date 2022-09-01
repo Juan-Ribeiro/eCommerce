@@ -1,7 +1,6 @@
-import {clientServices} from "./client-service.js";
+import {clientServices} from "../../service/client-service.js";
 
 const formularioLogin = document.querySelector("[data-login]");
-
 formularioLogin.addEventListener("submit", (evento) => {
     evento.preventDefault();
 
@@ -13,9 +12,8 @@ formularioLogin.addEventListener("submit", (evento) => {
             "email": email,
             "password": password
         }
-        clientServices.autenticarUsuario(usuario) ?
-            window.location.href = "./admin.html"
-            : window.location.href = "./error.html";
+        const autenticado = clientServices.autenticarUsuario(usuario);
+        autenticado ? window.location.href = "../../index.html" : window.location.href = "../../error.html";
     }
 })
 ;

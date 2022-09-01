@@ -62,15 +62,42 @@
 
 .producto__imagen {
     height: 10.875rem;
+    position: relative;
 
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
+.producto__acciones {
+    position: absolute;
+    top: .5rem;
+    right: .5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+.producto__acciones__borrar-producto {
+    height: 1.5rem;
+    width: 1.5rem;
+    border: none;
+    background-color: transparent;
+    background-image: url("../../img/icono__borrar-producto.svg");
+    background-size: cover;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.producto__acciones__borrar-producto img {
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
 .producto__imagen img {
-    max-width: 100%;
-    max-height: 100%;
+    width: 100%;
+    height: auto;
 }
 
 .producto__nombre {

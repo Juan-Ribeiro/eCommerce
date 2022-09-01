@@ -93,13 +93,9 @@
     color: var(--azul-100);
     border-color: var(--azul-100);
     background: #FFFFFF;
-    width: 8.3125rem;
 }
 
 @media screen and (min-width: 768px){
-    .seccion__header {
-        justify-content: flex-start;
-    }
 
     #boton-barra-busqueda {
         display: none;

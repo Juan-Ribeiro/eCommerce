@@ -19,38 +19,6 @@
 </head>
 <body>
 <header>
-    <section class="seccion__header">
-        <div class="seccion__header__direccion">
-            <a href="index.html">
-                <div class="seccion__header__direccion__logo"></div>
-            </a>
-        </div>
-        <i id="boton-barra-busqueda">
-            <img src="assets/img/icono__busqueda.svg" alt="Buscar">
-        </i>
-        <div class="seccion__header__barra-busqueda">
-            <form id="formulario-busqueda" class="seccion__header__barra-busqueda__form">
-                <i id="boton-volver"
-                   class="seccion__header__barra-busqueda__form__boton-volver">
-                    <img src="assets/img/icono__flecha-volver.svg" alt="Volver">
-                </i>
-                <input
-                        id="texto-busqueda"
-                        type="text"
-                        placeholder="¿Qué deseas buscar?"
-                        class="seccion__header__barra-busqueda__form__input">
-                <button
-                        type="submit"
-                        id="boton-buscar"
-                        class="seccion__header__barra-busqueda__form__boton-submit">
-                    <img src="assets/img/icono__busqueda.svg" alt="Buscar" class="barra-busqueda__icono">
-                </button>
-            </form>
-        </div>
-        <a id="boton-login" href="login.html">
-            <div class="boton-blanco boton">Login</div>
-        </a>
-    </section>
 </header>
 <main class="main__agregar-producto">
     <section class="seccion__agregar-producto">
@@ -95,46 +63,14 @@
     </section>
 </main>
 <footer>
-    <section class="seccion__about">
-        <div class="seccion__about__links">
-            <div class="seccion__about__logo"></div>
-            <ul class="seccion__about__links__lista">
-                <li class="about__enlace"><a href="#">Quiénes somos</a></li>
-                <li class="about__enlace"><a href="#">Política de privacidad</a></li>
-                <li class="about__enlace"><a href="#">Programa de fidelidad</a></li>
-                <li class="about__enlace"><a href="#">Nuestras tiendas</a></li>
-                <li class="about__enlace"><a href="#">Quiero ser franquiciado</a></li>
-                <li class="about__enlace"><a href="#">Anúncie aquí</a></li>
-            </ul>
-        </div>
-        <form class="seccion__contacto__formulario" data-tipo>
-            <h3>Hable con nosotros</h3>
-            <fieldset>
-                <div class="formulario__campo">
-                    <label for="input-nombre" class="formulario-contacto__label" type="text">Nombre</label>
-                    <input id="input-nombre" class="formulario__input" data-tipo="nombre" type="text"
-                           maxlength="40" pattern="^(?!\s*$).+" required>
-                    <span class="formulario__input__mensaje-error"></span>
-                </div>
-                <div class="formulario__campo">
-                    <label for="input-mensaje" class="formulario-contacto__label">Escribe tu mensaje</label>
-                    <textarea id="input-mensaje" class="formulario__input" data-tipo="mensaje" type="text"
-                              required rows="4" maxlength="120"></textarea>
-                    <span class="formulario__input__mensaje-error"></span>
-                </div>
-            </fieldset>
-            <button id="boton-enviar" class="formulario__boton-enviar boton">Enviar mensaje</button>
-        </form>
-    </section>
-    <section class="footer__creditos">
-        <h3 class="footer__creditos__texto">Desarrollado por Juan Elias Ribeiro <br> 2022</h3>
-    </section>
 </footer>
+<script src="controllers/page_controllers/header.js" type="module"></script>
+<script src="controllers/page_controllers/footer.js" type="module"></script>
+<script src="controllers/agregar-producto.controller.js" type="module"></script>
+<script src="controllers/search.controller.js" type="module"></script>
+<script src="service/form.js" type="module"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js"
         integrity="sha512-UNM1njAgOFUa74Z0bADwAq8gbTcqZC8Ej4xPSzpnh0l6KMevwvkBvbldF9uR++qKeJ+MOZHRjV1HZjoRvjDfNQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="service/form.js" type="module"></script>
-<script src="controllers/agregar-producto.controller.js" type="module"></script>
-<script src="controllers/search.controller.js" type="module"></script>
 </body>
 </html>
