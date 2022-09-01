@@ -90,8 +90,7 @@ const generarSeccionHeader = () => {
                     <img src="assets/img/icono__busqueda.svg" alt="Buscar" class="barra-busqueda__icono">
                 </button>
             </form>
-        </div>
-    `
+        </div>`
 
     implementarFuncionesDeBarraBusqueda(seccionHeader);
 
@@ -108,7 +107,6 @@ const generarSeccionHeader = () => {
         botonHeader.id = "boton-login";
 
         const linkBoton = document.createElement("a");
-        linkBoton.id = "boton-login";
         linkBoton.href = "./login.html";
         linkBoton.appendChild(botonHeader);
 

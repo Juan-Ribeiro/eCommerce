@@ -136,10 +136,6 @@
         text-align: left;
         padding: 1rem .75rem;
     }
-
-    .seccion__header a {
-        margin-left: auto;
-    }
 }
 
 @media screen and (min-width: 1280px){
