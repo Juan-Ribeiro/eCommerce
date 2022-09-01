@@ -18,5 +18,8 @@ formularioProducto.addEventListener("submit", (evento) => {
 
     clientServices
         .agregarProducto(categoria, urlImagen, nombre, precio, descripcion)
+        .then(() => {
+            window.location.href = "./edicion_concluida.html";
+        })
         .catch((err) => console.log(err));
 });
