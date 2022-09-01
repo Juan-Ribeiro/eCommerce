@@ -47,6 +47,9 @@ const crearNuevaSeccionDeProductos = (categoria) => {
     const seccionDeProductos = document.createElement("section");
     seccionDeProductos.classList.add("seccion__linea-de-productos");
 
+    seccionDeProductos.id = "linea_" + categoria.replace(/\s+/g, '-').toLowerCase();
+
+
     const contenedorSeccion = document.createElement("div");
 
     const cabezalSeccion = document.createElement("div");
