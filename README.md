@@ -9,11 +9,9 @@ Puntos hasta ahora implementados de la consigna:
 * Consultar productos
 * Editar productos
 * Borrar productos
+* Página de descripción de productos
 * Implementación JavaScript de Barra de búsqueda
 
+
 Otros puntos pendientes opcionales:
-* Página de descripción de productos
-* Modularización de CSS.
-* Modularización de controles de productos entre cliente y admin.
-* Reemplazar fetch con async/await.
 * Implementar una base de datos para imágenes
