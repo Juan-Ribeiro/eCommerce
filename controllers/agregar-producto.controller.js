@@ -1,6 +1,6 @@
 import {clientServices} from "../service/client-service.js";
 
-const admin = clientServices.verificarAdmin();
+const admin = await clientServices.verificarAdmin();
 if (!admin) {
     window.location.href = "./error.html";
 }

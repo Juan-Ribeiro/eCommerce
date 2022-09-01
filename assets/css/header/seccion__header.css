@@ -96,8 +96,15 @@
 }
 
 #boton-login, #boton-administrador{
-    width: 11.5rem;
     cursor: pointer;
+}
+
+#boton-login {
+    width: 10rem;
+}
+
+#boton-administrador {
+    width: 11.75rem;
 }
 
 #boton-administrador:hover {

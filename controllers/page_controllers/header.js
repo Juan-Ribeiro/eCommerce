@@ -1,7 +1,6 @@
 import {clientServices} from "../../service/client-service.js";
 
 const admin = await clientServices.verificarAdmin();
-console.log("Es admin: ", admin);
 
 const implementarFuncionBotonAdministrador = (botonAdministrador) => {
     botonAdministrador.addEventListener("click", (evento) => {
