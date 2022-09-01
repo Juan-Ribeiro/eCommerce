@@ -24,6 +24,9 @@
     font-style: normal;
 }
 
+.seccion__destacados__contenedor-destacados a{
+    cursor: pointer;
+}
 .boton-azul {
     background: var(--azul-100);
     color: white;
